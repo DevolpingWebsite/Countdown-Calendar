@@ -18,9 +18,9 @@ def days_between_dates(date1, date2):
     return number_of_days[0]
 
 root= Tk()
-c= Canvas(root, width=800, height=800, bg='black')
+c= Canvas(root, width=800, height=800, bg='orange')
 c.pack()
-c.create_text(100,50, anchor='w', fill='orange',font='Arial 28 bold underline', text='Luke\'s Countdowns')
+c.create_text(100,50, anchor='w', fill='black',font='Arial 28 bold underline', text='Luke\'s Countdowns')
 
 
 events = get_events()
@@ -32,6 +32,6 @@ for event in events:
     event_name = event[0]
     days_until = days_between_dates(event[1], today)
     display = 'It is %s days until %s' % (days_until, event_name)
-    c.create_text(100, vertical_space, anchor='w', fill='lightblue', font='Arial 28 bold', text = display)
+    c.create_text(100, vertical_space, anchor='w', fill='darkblue', font='Arial 28 bold', text = display)
 
     vertical_space = vertical_space + 50
